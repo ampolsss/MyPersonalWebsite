@@ -1,0 +1,244 @@
+/* General */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #dedee4;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0; /* Lighter text color for better contrast */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #1c1c1c;
+    color: #fff;
+    width: 250px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sidebar header h1 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #ffffff;
+}
+
+.sidebar header img.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; 
+    margin-bottom: 1rem;
+    border: 3px solid #fff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.dark-mode {
+    background-color: #1c1c1c;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar nav ul li {
+    margin: 1rem 0;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #444;
+}
+
+.sidebar.dark-mode nav ul li a {
+    color: #e0e0e0;
+}
+
+.sidebar.dark-mode nav ul li a:hover {
+    background-color: #333;
+}
+
+/* Dark Mode Toggle */
+button#darkModeToggle {
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#darkModeToggle:hover {
+    background-color: #555;
+}
+
+button#darkModeToggle.dark-mode {
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: #9b9ba0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+/* Sections */
+.section {
+    display: none;
+    text-align: justify;
+    padding: 2rem;
+    background: #d9d5d5;
+    color: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.section.active {
+    display: block;
+}
+
+.section.dark-mode {
+    background: #5c5959;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Section Spacing */
+.dynamic-section {
+    display: none; 
+    margin-top: 2rem; 
+    padding: 1.5rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dynamic-section.active {
+    display: block; 
+}
+
+.section {
+    margin-bottom: 2rem; 
+}
+
+
+.content {
+    padding: 3rem; 
+}
+
+/* Dynamic Buttons */
+.dynamic-button {
+    padding: 0.5rem 1.5rem;
+    margin: 0.5rem;
+    color: #fff;
+    background-color: #444;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.dynamic-button:hover {
+    background-color: #555;
+}
+
+.dynamic-button.dark-mode {
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+}
+
+.dynamic-button.dark-mode:hover {
+    background-color: #333;
+}
+
+
+/* About Image */
+.about-image {
+    display: block;
+    max-width: 130px;
+    margin: 1rem auto;
+    border-radius: 15%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+/* Facebook Button */
+.button-fb {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    background-color: #4267B2;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-fb:hover {
+    background-color: #365899;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.button-fb.dark-mode {
+    background-color: #1a5fb4;
+    color: #e0e0e0;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
