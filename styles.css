@@ -244,4 +244,105 @@ button#darkModeToggle.dark-mode {
     }
 }
 
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Stack the sidebar and content vertically */
+        height: auto; /* Allow scrolling */
+        overflow: auto; /* Enable scrolling for smaller screens */
+    }
+
+    .sidebar {
+        width: 100%; /* Make the sidebar full-width */
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .sidebar header img.profile-image {
+        width: 120px; /* Reduce image size for smaller screens */
+        height: 120px;
+    }
+
+    .sidebar nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center links for better alignment */
+        gap: 0.5rem;
+    }
+
+    .sidebar nav ul li {
+        flex: 1 0 45%; /* Make links take up 45% of the row */
+        text-align: center;
+    }
+
+    .content {
+        padding: 1rem; /* Reduce padding for content */
+    }
+
+    .about-image {
+        max-width: 100px; /* Scale down the about image */
+    }
+
+    .dynamic-button {
+        padding: 0.4rem 1rem; /* Adjust button padding */
+        font-size: 0.9rem; /* Slightly smaller text for buttons */
+    }
+
+    .section {
+        padding: 1rem; /* Reduce padding within sections */
+        margin-bottom: 1.5rem; /* Less spacing between sections */
+    }
+}
+/* Sidebar Toggle Button */
+.toggle-sidebar {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    background-color: #1c1c1c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Show the toggle button on smaller screens */
+@media (max-width: 768px) {
+    .toggle-sidebar {
+        display: block;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        height: 100%;
+        overflow-y: auto;
+        background-color: #1c1c1c;
+        z-index: 999;
+        transition: left 0.3s ease-in-out;
+        transform: translateX(-100%); /* Initially hidden */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.open {
+        left: 0; /* Slide in the sidebar */
+        transform: translateX(0); /* Visible when 'open' class is added */
+    }
+
+    .content {
+        margin-left: 0; /* Remove any offset for the sidebar */
+    }
+}
+.content {
+    overflow-y: auto;
+    max-height: calc(100vh - 60px); /* Adjust based on sidebar or header height */
+}
+
+
+
 

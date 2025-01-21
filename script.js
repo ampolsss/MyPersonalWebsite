@@ -63,3 +63,20 @@ dynamicButtons.forEach(button => {
         document.getElementById(sectionId).classList.add('active');
     });
 });
+
+const toggleSidebar = document.getElementById('toggleSidebar');
+const sidebars = document.querySelector('.sidebar');
+
+// Toggle sidebar visibility
+toggleSidebar.addEventListener('click', () => {
+    sidebars.classList.toggle('open');
+});
+
+// Close sidebar when a button is clicked
+navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        sidebar.classList.remove('open'); // Adjust the class name if needed
+    });
+});
+
+
