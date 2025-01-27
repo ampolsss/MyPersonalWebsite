@@ -210,6 +210,30 @@ button#darkModeToggle.dark-mode {
     border-radius: 15%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+.button-email {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    background-color: #0072C6; /* Microsoft-like blue */
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-email:hover {
+    background-color: #005A9E; /* Darker blue for hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.button-email.dark-mode {
+    background-color: #004A89;
+    color: #e0e0e0;
+}
+
+
 /* Facebook Button */
 .button-fb {
     display: inline-block;
@@ -231,6 +255,29 @@ button#darkModeToggle.dark-mode {
 
 .button-fb.dark-mode {
     background-color: #1a5fb4;
+    color: #e0e0e0;
+}
+
+.button-ig {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-ig:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.button-ig.dark-mode {
+    background: linear-gradient(45deg, #d13a3a, #a1299b, #5d2faf, #3944c4);
     color: #e0e0e0;
 }
 
